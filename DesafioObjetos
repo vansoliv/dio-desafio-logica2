@@ -1,0 +1,29 @@
+class Heroi {
+  constructor(nomeHeroi, idadeHeroi, tipoHeroi) {
+    this.nomeHeroi = nomeHeroi
+    this.idadeHeroi = idadeHeroi
+    this.tipoHeroi = tipoHeroi
+  }
+  
+  atacar(tipoHeroi) {
+     let ataqueHeroi
+     let tipo = tipoHeroi
+
+    if (tipo == "mago") {
+      ataqueHeroi = "magia"
+    } 
+    else if (tipoHeroi == "guerreiro") {
+      ataqueHeroi = "espada"
+    }
+     else if (tipoHeroi == "monge") {
+      ataqueHeroi = "artes marciais"
+    }
+    else
+    {
+      ataqueHeroi = "shuriken"
+    }
+    console.log(`O ${this.tipoHeroi} atacou usando ${this.ataqueHeroi}`)
+  }
+  }
+let meuHeroi = new Heroi("Dr Strange", 150, "mago")
+meuHeroi.atacar()
